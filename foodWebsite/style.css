@@ -1,0 +1,88 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.hero_image {
+	position: relative;
+	height: 100vh;
+	background: url('http://wallpaperscraft.com/image/tent_starry_sky_night_tourism_119523_1920x1080.jpg') no-repeat;
+	background-size: cover;
+}
+
+.hero_wrapper {
+	position: absolute;
+	color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero_wrapper h1 {
+	text-align: center;
+	font-size: 220%;
+	font-weight: 600;
+}
+.des {
+	font-size:20px;
+	margin-bottom: 20px;
+	text-rendering: optimizeLegibility;
+}
+input[type=text] {
+    display: block;
+    margin:0 auto;
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+input[type=submit] {
+	display: block;
+	height: 30px;
+	width: 200px;
+	border-radius: 10px;
+	margin:0 auto;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	background-color:#4cad77;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 800px;
+
+}
+
+/* Image Section*/
+.image {
+	width: 90%;
+	margin: 20px auto 20px;
+
+}
+.sec {
+	height: 100vh;
+}
+
+.imag_container {
+	width: 30%;
+	float: left;
+	margin-right: 3.33%;
+}
+.image:first-of-type {
+   
+}
+.imag_container img {
+	width: 100%;
+}
+@media screen  and (max-width: 500px) {
+	.imag_container {
+	width: 100%;
+	float: none;
+}
+}

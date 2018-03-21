@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Cagliostro|Oswald');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+header {
+	height: 50px;
+	background-color: black;
+	color: white;
+	padding: 0px 10px 0 10px;
+}
+ header h1 {
+ 	margin: 10px 0 0 0;
+ 	display: inline;
+    font-family: 'Oswald', sans-serif;
+    float: left;
+ }
+ nav ul {
+ 	display: block;
+ 	list-style: none;
+ 	float: left;
+ } 
+ nav ul li {
+ 	padding-top: 10px;
+ 	display: inline-block;
+ 	float: left;
+ 	margin-left: 25px;
+ } 
+ nav ul li a {
+ 	text-decoration: none;
+ 	font-size: 20px;
+ 	color: white;
+ 	font-family: 'Oswald', sans-serif;
+    font-family: 'Cagliostro', sans-serif;
+ }
+
+ .red{
+ 	background-color: red;
+ 	padding: 13px 5px 14px 5px;
+ }
+ .redbar {
+ 	border-top: 5px solid red;
+ }
+
+ .blue:hover {
+ 	background-color: blue;
+ 	padding: 13px 5px 14px 5px;
+
+ }
