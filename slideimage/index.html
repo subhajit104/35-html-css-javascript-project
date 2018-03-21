@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SlideBar</title>
+</head>
+<style>
+  body,.wrap,.slider,.slidecontent {
+    margin:0;
+	padding: 0;
+  	height: 100vh;
+  	width: 100%;
+  }
+
+  .wrap {
+  	position: relative;
+  }
+
+.slide1 {
+ 	background: url('https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') no-repeat;
+}
+.slide2{
+	background: url('https://images.pexels.com/photos/398533/pexels-photo-398533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat;
+
+}
+.slide3{
+
+     background: url('https://scontent.fccu5-1.fna.fbcdn.net/v/t1.0-9/29496614_756521197878091_1279607096302569069_n.jpg?_nc_cat=0&oh=249b191bf0d84cc796b4cf35f9dea307&oe=5B3D4478') no-repeat;
+
+
+}
+.slide {
+	background-size: cover;
+  	background-position: center;
+}
+
+.slidecontent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+span {
+	font-size: 3.3rem;
+	color: #fff;
+}
+.arrow {
+	position: absolute;
+	border-style: solid;
+	top: 50%;
+	cursor: pointer;
+	margin-top: -50px;
+	margin-left: 20px;
+	
+}
+#left_arrow {
+	border-width: 30px 40px 30px 0px;
+	border-color: transparent white transparent ;
+	
+}
+#right_arrow {
+	right: 0;
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent white ;
+    margin-right: 20px;	
+}
+</style>
+<body>
+	<div class="wrap">
+		<div id="left_arrow" class="arrow"></div>
+		<div class="slider">
+			<div class="slide slide1">
+				<div class="slidecontent"><span>IMAGE1</span></div>
+			</div>
+			<div class="slide slide2">
+				<div class="slidecontent"><span>IMAGE2</span></div>
+			</div>
+			<div class="slide slide3">
+				<div class="slidecontent"><span>IMAGE3</span></div>
+			</div>
+		</div>
+		<div id="right_arrow" class="arrow"></div>
+	</div>
+	
+</body>
+
+<script>	
+	//select all the slide class
+	let slides = Array.from(document.getElementsByClassName('slide'));
+	let leftSlide = document.getElementById('left_arrow');
+	let rightSlide = document.getElementById('right_arrow');
+	var current = 0 ;
+
+	function startSlide(){
+      slides.forEach((img) => {
+      	img.style.display = 'none';
+      });
+     slides[0].style.display = 'block';
+     leftSlide.style.display = 'none';
+	}
+
+	function slideRight() {
+		if(current == 1)
+			rightSlide.style.display = 'none';
+		leftSlide.style.display = 'block';
+		slides[current].style.display = 'none';
+		slides[current+1].style.display = 'block';
+		current++;
+	}
+
+   
+	function slideLeft() {
+		if(current == 1) 
+			leftSlide.style.display = 'none';
+		rightSlide.style.display = 'block';
+		slides[current].style.display = 'none';
+		slides[current-1].style.display = 'block';
+        current--;
+	}
+  startSlide();
+
+  leftSlide.addEventListener('click',(event) => {
+  	slideLeft();
+  });
+
+  rightSlide.addEventListener('click',(event) => {
+  	slideRight();
+  });
+  
+
+</script>
+</html>
